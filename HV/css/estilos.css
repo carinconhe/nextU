@@ -1,0 +1,25 @@
+body {
+  background-color: gray;
+}
+
+footer {
+  margin: 0 20px 0 0;
+}
+
+img {
+  border-radius: 10px;
+}
+
+#contenedor {
+  font-family: helvetica;
+  font-size: 16px;
+}
+
+#encabezado {
+  display: block;
+  margin: 0 auto;
+}
+
+.itemIndice {
+  list-style-type: upper-roman;
+}
