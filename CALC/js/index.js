@@ -6,6 +6,37 @@ var Calculadora = (function(){
   var firstNumber     = null;
   var secondNumber    = null;
   var opSignal        = null;
+  var memory          = null;
+  var memoryOp        = null;
+
+  var suma = function(){
+     result            = parseFloat(firstNumber) + parseFloat(secondNumber);
+     display.innerText = result;
+     firstNumber       = result;
+     memory            = secondNumber;
+  };
+
+  var multiplicacion = function(){
+     result            = parseFloat(firstNumber) * parseFloat(secondNumber);
+     display.innerText = result;
+     firstNumber       = result;
+     memory            = secondNumber;
+  };
+
+  var division = function(){
+     result            = parseFloat(firstNumber) / parseFloat(secondNumber);
+     display.innerText = result;
+     firstNumber       = result;
+     memory            = secondNumber;
+  };
+
+  var resta = function(){
+     result            = parseFloat(firstNumber) - parseFloat(secondNumber);
+     display.innerText = result;
+     firstNumber       = result;
+     memory            = secondNumber;
+  };
+
   var functions = {
     oncButton : function(){
       display.innerText = 0;
@@ -14,6 +45,9 @@ var Calculadora = (function(){
       firstNumber       = null;
       secondNumber      = null;
       opSignal          = null;
+      result            = null;
+      memory            = null;
+      memoryOp          = null;
     },
     pointButton : function(){
       if(functions.validatorDisplay()){
@@ -33,6 +67,10 @@ var Calculadora = (function(){
         }else {
           display.innerText = 0;
         }
+        console.log('signButton','firstNumber',firstNumber);
+        if(firstNumber)
+          firstNumber = display.innerText;
+
       }
     },
     validatorDisplay : function(){
@@ -42,7 +80,7 @@ var Calculadora = (function(){
         return false;
     },
     addDigitNumber : function(value,type){
-      if(display.innerText=='ERROR'){
+      if(display.innerText=='ERROR' || display.innerText=='INFINITY'){
         functions.oncButton();
         console.log('Error en operacion');
       }
@@ -71,24 +109,29 @@ var Calculadora = (function(){
       }
     },
     addDataToArray : function(value,operator){
-      console.log('firstNumber',parseFloat(firstNumber),'secondNumber',secondNumber,'Operador',opSignal,'Result',result);
       if(firstNumber==null && opSignal==null){
         firstNumber   = value;
         opSignal      = operator;
         canAddDigital = false;
       }else if(firstNumber!=null && opSignal!=null){
-        console.log('1',value,operator);
-        secondNumber  = value;
+        console.log('firstNumber',parseFloat(firstNumber),'secondNumber',secondNumber,'memoryOp',memoryOp,'Result',result,'operator',operator,'value',value);
+        if(memory && memoryOp==operator)
+          secondNumber  = memory;
+        else
+          secondNumber  = value;
+
         canAddDigital = false;
         switch (operator) {
           case '=':
             functions.equalButton();
             break;
           case '-':
-
+            console.log('addDataToArray','-');
+            resta();
             break;
           case '+':
-
+            console.log('addDataToArray','+');
+            suma();
             break;
           case '*':
 
@@ -97,6 +140,7 @@ var Calculadora = (function(){
 
             break;
         }
+        memoryOp = operator;
       }else{
         console.log('2',value,operator);
       }
@@ -108,16 +152,16 @@ var Calculadora = (function(){
       if(secondNumber){
         switch (opSignal) {
           case '-':
-
+            resta();
             break;
           case '+':
             suma();
             break;
           case '*':
-
+            multiplicacion();
             break;
           case '/':
-
+            division();
             break;
         }
       }
@@ -224,26 +268,9 @@ var Calculadora = (function(){
 
     document.getElementsByClassName('fondo')[0].blur();
   };
-  var suma = function(){
-     result            = parseFloat(firstNumber)+parseFloat(secondNumber);
-     display.innerText = result;
-     firstNumber       = secondNumber;
-     secondNumber      = null;
-  };
+
   return {
-      init : initialize,
-      resta : function(){
-       console.log('Metodo Resta');
-       return parseFloat(result);
-      },
-      multiplicacion : function(){
-       console.log('Metodo Multiplicación');
-       return parseFloat(result);
-      },
-      division : function(){
-       console.log('Metodo División');
-       return parseFloat(result);
-      }
+      init : initialize
   }
 })();
 
