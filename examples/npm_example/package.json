@@ -1,0 +1,11 @@
+{
+  "name": "npm_example",
+  "version": "1.0.0",
+  "description": "Examplo for npm create project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'Hi - Everybody'"
+  },
+  "author": "Camilo Rincon",
+  "license": "ISC"
+}
