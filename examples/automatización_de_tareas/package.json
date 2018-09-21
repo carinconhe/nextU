@@ -1,0 +1,16 @@
+{
+  "name": "proyecto-npm",
+  "version": "1.0.0",
+  "description": "Proyecto base NextU",
+  "main": "index.js",
+  "scripts": {
+    "css": "mkdir build && cd build && mkdir css & cd .. && stylus src/css/estilo.styl -o build/css/",
+    "js": "cd build && mkdir js & cd .. && uglifyjs src/js/main.js -o build/js/main.min.js",
+    "build": "npm run css && npm run js && echo '####\nHemos Terminado el proceso\n####'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "uglify-js": "^3.3.27"
+  }
+}

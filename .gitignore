@@ -1,2 +1,11 @@
-/node_modules
-*.zip
+.zip
+node_modules
+/vendor
+npm-debug.log
+yarn-error.log
+.env
+.ftpconfig
+.ftpignore
+id_rsa
+.DS_Store
+.htaccess

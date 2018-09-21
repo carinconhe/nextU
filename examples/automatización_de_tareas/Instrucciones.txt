@@ -1,0 +1,14 @@
+Leccion: https://learn.nextu.com/mod/lesson/view.php?id=3591
+
+1) instalar: npm install uglify-js -g
+
+2) Se debe modificar la estructura de rutas del objeto "script" debido a que la forma en como se hace en la lección ya no es la correcta debido a que se usa para Mac, en Windows ahora es:
+
+"scripts": {
+    "css": "mkdir build && cd build && mkdir css & cd.. && stylus src/css/estilo.styl -o build/css/",
+    "js": "cd build && mkdir js & cd.. && uglifyjs src/js/main.js -o build/js/main.min.js",
+    "build": "npm run css && npm run js && echo '####\nHemos Terminado el proceso\n####'"
+  }
+
+3) ejecutar el comando: npm run build
+para generar la carpeta build que contiene las 2 subcarpetas de css y js con sus respectivos archivos de tareas
