@@ -109,46 +109,53 @@ var Calculadora = (function(){
       }
     },
     addDataToArray : function(value,operator){
+      console.log('Init','firstNumber',parseFloat(firstNumber),'secondNumber',secondNumber,'memoryOp',memoryOp,'Result',result,'operator',operator,'opSignal',opSignal);
       if(firstNumber==null && opSignal==null){
         firstNumber   = value;
         opSignal      = operator;
         canAddDigital = false;
       }else if(firstNumber!=null && opSignal!=null){
-        console.log('firstNumber',parseFloat(firstNumber),'secondNumber',secondNumber,'memoryOp',memoryOp,'Result',result,'operator',operator,'value',value);
         if(memory && memoryOp==operator)
           secondNumber  = memory;
-        else
+        else{
           secondNumber  = value;
-
-        canAddDigital = false;
-        switch (operator) {
-          case '=':
-            functions.equalButton();
-            break;
-          case '-':
-            console.log('addDataToArray','-');
-            resta();
-            break;
-          case '+':
-            console.log('addDataToArray','+');
-            suma();
-            break;
-          case '*':
-
-            break;
-          case '/':
-
-            break;
         }
-        memoryOp = operator;
+
+        console.log('Mid','firstNumber',parseFloat(firstNumber),'secondNumber',secondNumber,'memoryOp',memoryOp,'Result',result,'operator',operator,'opSignal',opSignal);
+        canAddDigital = false;
+        if(memoryOp=='=' && memoryOp!=operator){
+          memory            = null;
+          secondNumber      = null;
+          opSignal          = operator;
+        }else{
+          functions.equalButton(operator);
+        }
+        // switch (operator) {
+        //   case '=':
+        //     functions.equalButton();
+        //     break;
+        //   case '-':
+        //     console.log('addDataToArray','-');
+        //     resta();
+        //     break;
+        //   case '+':
+        //     console.log('addDataToArray','+');
+        //     suma();
+        //     break;
+        //   case '*':
+        //
+        //     break;
+        //   case '/':
+        //
+        //     break;
+        // }
+        // memoryOp = operator;
       }else{
         console.log('2',value,operator);
       }
-
-      //console.log('firstNumber',parseFloat(firstNumber),'secondNumber',secondNumber,'Operador',opSignal,'Result',result);
+      console.log('End','firstNumber',parseFloat(firstNumber),'secondNumber',secondNumber,'memoryOp',memoryOp,'Result',result,'operator',operator,'opSignal',opSignal);
     },
-    equalButton:function(){
-      console.log('firstNumber',parseFloat(firstNumber),'secondNumber',secondNumber,'Result',result);
+    equalButton:function(operator){
       if(secondNumber){
         switch (opSignal) {
           case '-':
@@ -164,6 +171,29 @@ var Calculadora = (function(){
             division();
             break;
         }
+        memoryOp = operator;
+        if(operator!='=')
+          opSignal = operator;
+      }
+    },
+    pressButtonOperation:function(){
+      var convOpt = this.getAttribute('id');
+      switch (convOpt) {
+        case 'igual':
+          functions.addDataToArray(display.innerText,'=');
+          break;
+        case 'mas':
+          functions.addDataToArray(display.innerText,'+');
+          break;
+        case 'menos':
+          functions.addDataToArray(display.innerText,'-');
+          break;
+        case 'por':
+          functions.addDataToArray(display.innerText,'*');
+          break;
+        case 'dividivo':
+          functions.addDataToArray(display.innerText,'/');
+          break;
       }
     },
     pressButton:function(){
@@ -253,7 +283,11 @@ var Calculadora = (function(){
    document.getElementById('on').addEventListener('click',functions.oncButton);
    document.getElementById('punto').addEventListener('click',functions.pointButton);
    document.getElementById('sign').addEventListener('click',functions.signButton);
-   document.getElementById('igual').addEventListener('click',functions.equalButton);
+   document.getElementById('igual').addEventListener('click',functions.pressButtonOperation);
+   document.getElementById('mas').addEventListener('click',functions.pressButtonOperation);
+   document.getElementById('menos').addEventListener('click',functions.pressButtonOperation);
+   document.getElementById('por').addEventListener('click',functions.pressButtonOperation);
+   document.getElementById('dividido').addEventListener('click',functions.pressButtonOperation);
 
    var teclas = document.querySelectorAll('.tecla');
    [].forEach.call(teclas, function(tecla) {
