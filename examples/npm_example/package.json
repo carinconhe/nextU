@@ -6,16 +6,19 @@
   "scripts": {
     "test": "echo 'Hi - Everybody'"
   },
-  "keywords":[
+  "keywords": [
     "gulpjs",
     "task"
   ],
   "author": "Camilo Rincon",
   "license": "ISC",
   "devDependencies": {
+    "grunt": "^1.0.3",
     "gulp": "^4.0.0",
     "gulp-stylus": "^2.7.0",
     "gulp-uglify": "^3.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gulp-rename": "^1.4.0"
+  }
 }

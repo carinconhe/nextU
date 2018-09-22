@@ -1,0 +1,27 @@
+{
+  "name": "luz-azul",
+  "version": "1.0.0",
+  "description": "Proyecto Ejercicio de ejemplo",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carinconhe/nextU.git"
+  },
+  "author": "Camilo Rincon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carinconhe/nextU/issues"
+  },
+  "homepage": "https://github.com/carinconhe/nextU#readme",
+  "devDependencies": {
+    "foundation-cli": "^2.2.5",
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-replace": "^1.0.0",
+    "jquery": "^3.3.1",
+    "what-input": "^5.1.2"
+  }
+}
