@@ -6,3 +6,5 @@ En el proyecto
 npm i grunt --save-dev
 Se crea el archivo en el proyecto
 touch Gruntfile.js
+Instalacion de libreria para comprimir
+npm i grunt-contrib-uglify --save-dev
