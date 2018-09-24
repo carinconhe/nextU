@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <base href="/SPA-back-end/" >
+  <title>Album</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Album</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index">Mis Fotos</a></li>
+        <li><a href="explorar">Explorar</a></li>
+        <li><a href="#">Cerrar Sesión</a></li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Mis Fotos</a></li>
+        <li><a href="explorar">Explorar</a></li>
+        <li><a href="#">Cerrar Sesión</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+  <div id="vista-principal">
+    <div class="section no-pad-bot" id="titulo-principal">
+      <div class="container">
+        <br><br>
+        <h1 class="header center orange-text">Fotos y más fotos</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">Aplicación para ver tus mejores momentos</h5>
+        </div>
+        <br><br>
+      </div>
+    </div>
+
+    <div class="next-btn">
+      <a class="btn-floating btn-small light-blue lighten-1 waves-effect" href="fotos-pag2">
+        <i class="large material-icons">keyboard_arrow_right</i>
+      </a>
+    </div>
+
+    <!-- Pegar aquí la flecha a la izquierda de index2.html -->
+
+    <div class="prev-btn invisible">
+      <a class="btn-floating btn-small light-blue lighten-1 waves-effect" href="index">
+        <i class="large material-icons">keyboard_arrow_left</i>
+      </a>
+    </div>
+
+    <div class="container">
+      <div class="section">
+        <div class="row" id="fila1">
+          <div class="col s12 m4">
+            <div class="card">
+              <div class="card-image">
+                <img src="img/1.jpg">
+                <span class="card-title">Times Square</span>
+              </div>
+              <div class="card-action">
+                <a href="./foto-ampliada/1">Ver mas</a>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="card">
+              <div class="card-image">
+                <img src="img/2.jpg">
+                <span class="card-title">Ayuntamiento</span>
+              </div>
+              <div class="card-action">
+                <a href="./foto-ampliada/2">Ver mas</a>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="card">
+              <div class="card-image">
+                <img src="img/3.jpg">
+                <span class="card-title">Playa</span>
+              </div>
+              <div class="card-action">
+                <a href="./foto-ampliada/3">Ver mas</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pegar aquí el código copiado de index2.html -->
+
+        <div class="row invisible" id="fila2">
+          <div class="col s12 m4">
+            <div class="card">
+              <div class="card-image">
+                <img src="img/4.jpg">
+                <span class="card-title">Camping</span>
+              </div>
+              <div class="card-action">
+                <a href="./foto-ampliada/4">Ver mas</a>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="card">
+              <div class="card-image">
+                <img src="img/5.jpg">
+                <span class="card-title">Aventura</span>
+              </div>
+              <div class="card-action">
+                <a href="./foto-ampliada/5">Ver mas</a>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="card">
+              <div class="card-image">
+                <img src="img/6.jpg">
+                <span class="card-title">Hotel</span>
+              </div>
+              <div class="card-action">
+                <a href="./foto-ampliada/6">Ver mas</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <br><br>
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Album</h5>
+          <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Hecho por <a class="orange-text text-lighten-3" href="#">NextU</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/page.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>

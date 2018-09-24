@@ -1,0 +1,22 @@
+.next-btn{
+  position: absolute;
+  right: 2vw;
+  top: 33em;
+}
+.prev-btn{
+  position: absolute;
+  left: 2vw;
+  top: 33em;
+}
+.above-pic{
+  margin-top: 4em;
+}
+.pic-row{
+  margin-bottom: 0.3em;
+}
+div.section{
+  padding-top: 0;
+}
+.invisible{
+  display: none;
+}
