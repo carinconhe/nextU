@@ -1,6 +1,11 @@
 <div class="contenedor-principal">
   <barra-superior></barra-superior>
-  <h1>
+  <h1 (click)="titleClicked()">
     {{title}}
   </h1>
+  <p>Mi nombre es {{nombreUsuario}} y mi edad es {{edadUsuario}}</p>
+  <input type="text" [value]="nombreUsuario">
+  <br>
+  <input type="text" [(ngModel)]="persona.nombre">
+  <input type="text" [(ngModel)]="persona.edad">
 </div>

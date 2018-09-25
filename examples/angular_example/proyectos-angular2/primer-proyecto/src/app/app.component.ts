@@ -7,5 +7,18 @@ import { BarraSuperiorComponent } from './barra-superior/barra-superior.componen
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Hola Camilo Rincon';
+  title = 'Hola Amigo';
+  nombreUsuario = 'Camilo Rincón';
+  edadUsuario = 37;
+
+  titleClicked(){
+    alert('Disparo - Event - Clic');
+  }
+
+  persona ={
+    nombre : 'Andrés',
+    edad   : 35,
+    sexo   : 'M',
+    salario : 10000000
+  }
 }
