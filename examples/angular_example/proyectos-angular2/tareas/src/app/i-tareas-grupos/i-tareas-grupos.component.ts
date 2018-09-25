@@ -11,6 +11,15 @@ export class ITareasGruposComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  onHoverGroupIn(item){
+    item.resaltado = true;
+  }
+
+  onHoverGroupOut(item){
+    item.resaltado = false;
+  }
+
   grupos = [
     {
       nombre : 'Trabajo',

@@ -3,9 +3,33 @@ node_modules
 vendor
 npm-debug.log
 yarn-error.log
+id_rsa
+
+# compiled output
+/dist
+/tmp
+
+# dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+
+
+# mis
+npm-debug.log
+testem.log
+
+
+#System Files
+Thumbs.db
+.DS_Store
+.htaccess
 .env
 .ftpconfig
 .ftpignore
-id_rsa
-.DS_Store
-.htaccess
