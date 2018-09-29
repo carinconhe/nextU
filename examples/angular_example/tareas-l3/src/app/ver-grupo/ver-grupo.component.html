@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="card-content">
+    <span class="card-title red-text">{{nombreGrupo}}</span>
+
+    <h6 class="grey-text">Tareas asociadas a este grupo:</h6>
+
+    <div class="row">
+      <div class="collection">
+        <a class="collection-item red-text" *ngFor="let item of tareas">
+          {{item.titulo}} <i class="material-icons left">star</i>
+          <!-- <span class="right">{{item.fecha | checkFecha}}</span> -->
+          <span class="right">{{item.fecha | checkFecha}}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
