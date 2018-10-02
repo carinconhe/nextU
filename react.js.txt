@@ -1,0 +1,25 @@
+Configuracion de ambiente para react js
+INstalacion de webpack
+npm install webpack -g
+Instalación de babel
+npm i -g  babel
+npm i -g babel-cli
+
+Creacion de proyecto
+mkdir primerApp
+npm init
+
+dependencias
+npm i webpack --save
+npm i webpack-dev-server --save
+npm i react --save
+npm i react-dom --save
+npm i babel-core
+npm i babel-loader
+npm i babel-preset-react
+npm i babel-preset-es2015
+npm i -D webpack-cli
+
+installar react router
+npm i react-router --save
+npm i --save react-router-dom

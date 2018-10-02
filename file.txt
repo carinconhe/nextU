@@ -30,3 +30,10 @@ ng g s nombre_servicio
 
 Para instalar el modulo
 npm install ng2-datepicker --save
+
+Para crear un servicio http
+ng g s http
+
+
+Para realizar unos archivos en produccion usamos
+ng build -prod

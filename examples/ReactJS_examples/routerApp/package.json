@@ -1,13 +1,13 @@
 {
-  "name": "primerapp",
+  "name": "routerapp",
   "version": "1.0.0",
-  "description": "Primer proyecto de ReactJS",
+  "description": "Proyecto para el manejo de router con ReactJS",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --hot"
   },
-  "author": "Camilo Rincon",
-  "license": "ISC",
+  "author": "",
+  "license": "MIT",
   "dependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.0",
