@@ -23,3 +23,5 @@ npm i -D webpack-cli
 installar react router
 npm i react-router --save
 npm i --save react-router-dom
+
+https://www.techiediaries.com/react-router-dom-v4/
