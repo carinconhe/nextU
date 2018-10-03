@@ -1,0 +1,27 @@
+Instalacion de Angular 2
+npm i -g angular-cli
+Creacion de proyecto
+ng new primer-proyecto
+Lanzar el primer proyecto
+ng serve
+url de angular
+http://localhost:4200
+
+para crear un componente
+ng g component barra-superior
+
+Para crear un pipe personalizado
+ng g pipe duplicar
+
+Para crear un servicio
+ng g s nombre_servicio
+
+Para instalar el modulo
+npm install ng2-datepicker --save
+
+Para crear un servicio http
+ng g s http
+
+
+Para realizar unos archivos en produccion usamos
+ng build -prod

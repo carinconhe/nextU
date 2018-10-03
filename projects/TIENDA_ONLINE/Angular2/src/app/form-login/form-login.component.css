@@ -1,0 +1,15 @@
+h1{
+  color: white;
+  text-align: center;
+}
+
+label{
+  color: #fff;
+}
+
+.submit-login{
+  background-color: green;
+  color: #fff;
+  border: 1px solid green;
+  align-content: center;
+}

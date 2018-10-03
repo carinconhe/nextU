@@ -1,0 +1,8 @@
+body{
+    background-image: url('assets/images/login-fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    font-size: 2.5em;
+}
