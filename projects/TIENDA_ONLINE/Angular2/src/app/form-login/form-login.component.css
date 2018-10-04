@@ -7,9 +7,11 @@ label{
   color: #fff;
 }
 
-.submit-login{
-  background-color: green;
-  color: #fff;
-  border: 1px solid green;
-  align-content: center;
+input.ng-invalid.ng-touched{
+  border: 1px solid red;
+}
+
+.error{
+  color:red;
+  display: none;
 }
