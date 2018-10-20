@@ -1,6 +1,10 @@
+
 h1{
   color: white;
   text-align: center;
+}
+#contedorForm{
+  margin-top: 300px;
 }
 
 label{
@@ -9,6 +13,7 @@ label{
 
 input.ng-invalid.ng-touched{
   border: 1px solid red;
+  background-color: #f4cfe7;
 }
 
 .error{

@@ -1,4 +1,4 @@
-<div class="col-sm-6  col-sm-offset-3">
+<div id="contedorForm" class="col-sm-6  col-sm-offset-3">
   <h1>{{title}}</h1>
   <form (ngSubmit)="enviarForm(f)" #f="ngForm">
     <div class="form-group">
@@ -6,11 +6,11 @@
       <input type="email" class="form-control" id="email_input" ngModel name="email_input" required pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?">
 
     </div>
-      <div class="form-group">
-        <label for="password_input">Contraseña</label>
-        <input type="password" class="form-control" id="password_input" ngModel name="password_input" required>
+    <div class="form-group">
+      <label for="password_input">Contraseña</label>
+      <input type="password" class="form-control" id="password_input" ngModel name="password_input" required>
     </div>
-        <label class="error">Debes ingresar un email válido</label>
-        <button type="submit" class="btn btn-success center-block">Enviar</button>
+    <label class="error">Debes ingresar un email válido</label>
+    <button type="submit" class="btn btn-success center-block">Enviar</button>
   </form>
 </div>

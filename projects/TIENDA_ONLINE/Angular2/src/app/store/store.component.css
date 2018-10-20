@@ -1,0 +1,74 @@
+h2 {
+  font-size: 0.9em;
+}
+
+h3 {
+  font-size: 0.5em;
+}
+
+.containter-store {
+  width: 100%;
+  background-color: white;
+  display: inline-block;
+  margin-top: 100px;
+  min-height: 600px;
+  height: auto;
+}
+
+.containter-store .top {
+  margin: 0 20px;
+  height: 100px;
+}
+
+.containter-store .top .search {
+  float: right;
+  width: 20%;
+  display: inline-block;
+}
+
+.containter-store .top .search input {
+  width: 95%;
+  font-size: 0.65em;
+}
+
+.containter-store .top .title {
+  width: 80%;
+  display: inline-block;
+}
+
+.container-fluid {
+  margin-top: 10px
+}
+
+article.product {
+  font-size: 0.3em;
+  border: 1px solid #CBCAC7;
+  height: auto;
+  padding: 10px;
+}
+
+article.product img {
+  width: 90%;
+  height: auto;
+  margin: 5px 10px;
+}
+article.product  span{
+  display: block;
+}
+
+article.product .buttons {
+  margin-top: 20px;
+  clear: both;
+}
+
+article.product button {
+  width: 35%;
+  padding: 2px 2px;
+  font-size: 0.2em;
+}
+
+article.product input {
+  width: 20%;
+  text-align: right;
+  float: right;
+}

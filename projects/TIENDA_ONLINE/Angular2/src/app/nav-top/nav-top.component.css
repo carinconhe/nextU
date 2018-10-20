@@ -1,0 +1,18 @@
+.right{
+  float: right;
+  list-style-type: none;
+  font-size: 7px;
+}
+ .right li{
+   list-style: none;
+   display: inline-block;
+   margin:10px 5px;
+ }
+
+ .visibleNav{
+   display: block;
+ }
+
+ .hiddenNav{
+   display:none;
+ }

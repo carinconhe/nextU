@@ -1,0 +1,13 @@
+<div id="navtop" [ngClass]={hiddenNav:toggle}>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <a href="#" class="title-store">La Bodega</a>
+      <ul class="right">
+        <li><a [routerLink]="['catalogo']"><span class="glyphicon glyphicon-th"></span></a></li>
+        <li><a [routerLink]="['carrito']"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+        <li><a [routerLink]="['']"><span class="glyphicon glyphicon-inbox"></span></a></li>
+        <li><a [routerLink]="['']"><span class="glyphicon glyphicon-log-out"></span></a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
