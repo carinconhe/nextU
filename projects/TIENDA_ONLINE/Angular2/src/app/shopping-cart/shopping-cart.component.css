@@ -36,7 +36,7 @@ h3 {
 }
 
 article.product {
-  font-size: 0.3em;
+  font-size: 0.5em;
   border: 1px solid #CBCAC7;
 }
 
@@ -54,15 +54,15 @@ article.product  span{
   display: block;
 }
 
-article.product .buttons {
+.buttons {
   margin-top: 20px;
   clear: both;
+  font-size: 0.5em;
 }
 
 article.product button, article.product a  {
   width: 35%;
   padding: 2px 2px;
-  font-size: 0.2em;
 }
 
 article.product input {

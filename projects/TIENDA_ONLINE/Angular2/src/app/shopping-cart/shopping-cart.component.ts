@@ -38,10 +38,32 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   payProducts(){
-    console.log(this.httpService.setProduct(this.shoppingCart));
-    this.httpService.setShoppingCart({total:0,totalVisible:true,products:[]});
-    this.shoppingCart = this.httpService.getShoppingCart();
-    this.products= this.shoppingCart['products'];
-    this.totalPrice = this.getTotalPriceSCart();
+
+    if(this.shoppingCart['total']>0){
+      var rs =this.httpService.setProduct(this.shoppingCart);
+      rs.subscribe(
+        (data => {
+          if(data.error==false){
+            console.log(data.result);
+            if(data.result==1){
+              this.httpService.setShoppingCart({total:0,totalVisible:true,products:[]});
+              this.shoppingCart = this.httpService.getShoppingCart();
+              this.products= this.shoppingCart['products'];
+              this.totalPrice = this.getTotalPriceSCart();
+            }
+          }
+        }),
+        (x => {
+          this.errorF(x._body);
+        })
+      );
+    }
+  }
+
+  errorF(data){
+    if(typeof data=='string')
+      data = JSON.parse(data);
+    if(data.error == true)
+      alert(data.message);
   }
 }

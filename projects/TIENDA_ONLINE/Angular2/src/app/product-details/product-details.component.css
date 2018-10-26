@@ -21,10 +21,6 @@ h3 {
   margin: 10px 50px;
 }
 
-.containter-details .image {
-
-}
-
 .containter-details  .image img{
   width: 80%;
   border: 1px solid #CBCAC7;
@@ -36,7 +32,6 @@ h3 {
 }
 
 .containter-details a {
-  font-size: 0.2em;
   margin: 20px 20px;
   border: 1px solid #CBCAC7;
 }

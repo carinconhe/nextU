@@ -1,7 +1,7 @@
 .right{
   float: right;
   list-style-type: none;
-  font-size: 7px;
+  font-size: 0.5em;
 }
  .right li{
    list-style: none;
