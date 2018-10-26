@@ -45,11 +45,17 @@ article.product {
   border: 1px solid #CBCAC7;
   height: auto;
   padding: 10px;
+  margin-bottom: 10px;
+}
+
+article.product .content-data{
+  height: 300px;
+  width: auto;
 }
 
 article.product img {
-  width: 90%;
-  height: auto;
+  width: auto;
+  height: 140px;
   margin: 5px 10px;
 }
 article.product  span{
@@ -61,7 +67,7 @@ article.product .buttons {
   clear: both;
 }
 
-article.product button {
+article.product button, article.product a  {
   width: 35%;
   padding: 2px 2px;
   font-size: 0.2em;

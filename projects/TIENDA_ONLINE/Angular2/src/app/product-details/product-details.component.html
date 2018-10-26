@@ -1,0 +1,18 @@
+<div class="containter-details" *ngFor="let product of products">
+  <div class="top">
+    <div class="title">
+      <h2>{{product.name}}</h2>
+    </div>
+    <hr>
+    <div class="row product">
+      <div class="col-md-6 image">
+        <img src="{{product.image}}" alt="{{product.name}}">
+      </div>
+      <div class="col-md-6 descrip">
+        <span>Precio: {{product.price}}</span>
+        <span>Unidades disponibles: {{product.quantity}}</span>
+      </div>
+    </div>
+    <a (click)="backClicked()" class=" btn btn-outline-secondary">Atras</a>
+  </div>
+</div>

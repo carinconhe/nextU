@@ -10,48 +10,19 @@
   </div>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-3 box boxblue">
+      <div class="col-xs-3" *ngFor="let item of products; let i = index;">
         <article class="product">
-          <div>
-            <img src="assets/images/Aguacate.jpg" alt="" class="listProductImage">
-            <h4>Aguacate</h4>
-            <span class="price">Precio: $10</span>
-            <span class="stock">Unidades disponibles: 46</span>
+          <div class="content-data">
+            <img src="{{item.image}}" alt="" class="listProductImage">
+            <h4>{{item.name}}</h4>
+            <span class="price">Precio: ${{item.price}}</span>
+            <span class="stock">Unidades disponibles: {{item.quantity}}</span>
             <div class="buttons">
-              <button class="btn btn-primary" type="button" name="more">Ver más</button>
-              <button class="btn btn-warning" type="button" name="add">Añadir</button>
-              <input class="quantity" type="number" name="quantity" value="0" step="1">
-            </div>
-          </div>
-        </article>
-      </div>
-      <div class="col-sm-3 box boxgray">
-        <article class="product">
-          <div>
-            <img src="assets/images/Aguacate.jpg" alt="" class="listProductImage">
-            <h4>Aguacate</h4>
-            <span class="price">Precio: $10</span>
-            <span class="stock">Unidades disponibles: 46</span>
-            <div class="buttons">
-              <button class="btn btn-primary" type="button" name="more">Ver más</button>
-              <button class="btn btn-warning" type="button" name="add">Añadir</button>
-              <input class="quantity" type="number" name="quantity" value="0" step="1">
-            </div>
-          </div>
-        </article>
-      </div>
-      <div class="col-sm-3 box boxgray">Column2</div>
-      <div class="col-sm-3 box boxgray">
-        <article class="product">
-          <div>
-            <img src="assets/images/Aguacate.jpg" alt="" class="listProductImage">
-            <h4>Aguacate</h4>
-            <span class="price">Precio: $10</span>
-            <span class="stock">Unidades disponibles: 46</span>
-            <div class="buttons">
-              <button class="btn btn-primary" type="button" name="more">Ver más</button>
-              <button class="btn btn-warning" type="button" name="add">Añadir</button>
-              <input class="quantity" type="number" name="quantity" value="0" step="1">
+              <a [routerLink]="['producto', item.name]" class="btn btn-primary">
+                Ver más
+              </a>
+              <button class="btn btn-warning" type="button" name="add" (click)="addProductShoppingCart(item,data.value)">Añadir</button>
+              <input class="quantity" type="number" name="quantity_{{item.id}}" id="quantity_{{item.id}}" min="0" value="0" step="1" (change)="setQuantity($event.target.value)" #data>
             </div>
           </div>
         </article>

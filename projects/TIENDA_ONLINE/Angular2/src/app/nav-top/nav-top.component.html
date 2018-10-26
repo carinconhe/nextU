@@ -4,7 +4,10 @@
       <a href="#" class="title-store">La Bodega</a>
       <ul class="right">
         <li><a [routerLink]="['catalogo']"><span class="glyphicon glyphicon-th"></span></a></li>
-        <li><a [routerLink]="['carrito']"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+        <li>
+          <a [routerLink]="['carrito']"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+          <label class="totalProd" [ngClass]="{hiddenNav:products.totalVisible}">{{ products.total }}</label>
+        </li>
         <li><a [routerLink]="['']"><span class="glyphicon glyphicon-inbox"></span></a></li>
         <li><a [routerLink]="['']"><span class="glyphicon glyphicon-log-out"></span></a></li>
       </ul>

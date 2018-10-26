@@ -12,7 +12,6 @@ export class FormLoginComponent implements OnInit {
   constructor(private httpService : HttpService,private router: Router){ }
 
   enviarForm(form){
-    console.log('-');
     var datos = {'email':form.value.email_input,'password':form.value.password_input}
     var rs = this.httpService.sendDatos(datos);
 
@@ -20,6 +19,7 @@ export class FormLoginComponent implements OnInit {
     	(x => {
         this.router.navigate(['catalogo']);
         document.getElementById("navtop").style.display = "block";
+        document.body.style.backgroundImage= "url('assets/images/main-fondo.jpg')";
       }),
     	(x => {
         this.errorF(x._body);
@@ -35,10 +35,7 @@ export class FormLoginComponent implements OnInit {
   }
 
   ngOnInit() {
-
-    this.httpService.getDatos().subscribe(
-        (data: Response) => console.log(data)
-    )
+    document.body.style.backgroundImage= "url('assets/images/login-fondo.jpg')";
   }
 
 }

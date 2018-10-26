@@ -16,3 +16,15 @@
  .hiddenNav{
    display:none;
  }
+
+ .totalProd{
+   background-color: #fa3e3e;
+   border-radius: 46%;
+   width: 16px;
+   color: #fff;
+   text-align: center;
+   position: fixed;
+   top: 22px;
+   margin: 0 5px;
+   font-size: 7px;
+ }

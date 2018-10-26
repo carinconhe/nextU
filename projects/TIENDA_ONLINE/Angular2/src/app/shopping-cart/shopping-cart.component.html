@@ -1,3 +1,41 @@
-<p>
-  shopping-cart works!
-</p>
+<div class="containter-cart">
+  <div class="top">
+    <div class="title">
+      <h2>Carrito de compras</h2>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="row" *ngFor="let item of products; let i = index;">
+          <div class="col-xs-12">
+            <article class="product">
+              <div class="content-data">
+                <img src="{{item.image}}" alt="" class="listProductImage">
+                <h4>{{item.name}}</h4>
+                <span class="stock">Unidades: {{item.quantity}}</span>
+                <span class="price">subtotal: ${{item.subtotal}}</span>
+
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-6">
+        <div class="row">
+          <div class="col-xs-12 black">
+            <span class="stock">Total: ${{totalPrice}}</span>
+            <div class="buttons">
+              <button type="button" name="button" (click)="removeAllSCart()">Cancelar</button>
+              <button type="button" name="button" (click)="payProducts()">Pagar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

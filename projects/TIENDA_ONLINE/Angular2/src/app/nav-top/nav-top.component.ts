@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { HttpService } from '../http.service';
 
 @Component({
@@ -6,12 +6,14 @@ import { HttpService } from '../http.service';
   templateUrl: './nav-top.component.html',
   styleUrls: ['./nav-top.component.css']
 })
-export class NavTopComponent implements OnInit {
-  private   toggle : boolean = false;
-  constructor(private httpService : HttpService){ }
+export class NavTopComponent {
+  toggle : boolean = false;
+  products : Object;
 
-  ngOnInit() {
+  constructor(private httpService : HttpService){
     this.toggle = this.httpService.getToggle();
+    this.products = this.httpService.getShoppingCart();
   }
+
 
 }
