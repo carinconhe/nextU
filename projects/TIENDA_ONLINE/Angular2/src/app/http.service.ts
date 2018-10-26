@@ -4,7 +4,7 @@ import 'rxjs/Rx';
 
 @Injectable()
 export class HttpService {
-  private   toggle : boolean = false;
+  private   toggle : boolean = true;
   private shoppingCart = {total:0,totalVisible:true,products:[]};
   constructor(private http: Http) { }
 
