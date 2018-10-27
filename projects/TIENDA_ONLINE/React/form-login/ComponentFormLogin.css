@@ -1,0 +1,23 @@
+h1 {
+  color: white;
+  text-align: center;
+}
+
+
+#contenedorForm{
+  margin-top: 300px;
+}
+
+#contenedorForm label{
+  color: #fff;
+}
+
+#contenedorForm input.ng-invalid{
+  border: 1px solid red;
+  background-color: #f4cfe7;
+}
+
+ #contenedorForm .error{
+  color:red;
+  display: none;
+}
