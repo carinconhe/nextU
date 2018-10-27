@@ -4,13 +4,16 @@ import './ComponentNavTop.css';
 class ComponentNavTop extends React.Component{
   constructor(){
     super();
+    this.state ={
+      title : "La Bodega"
+    }
   }
   render(){
     return(
-      <div id="navtop" >
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-          <div class="container">
-            <a href="#" className="title-store">La Bodega</a>
+      <div id="navtop" className={this.props.visibleDivProps?'visibleNav':'hiddenNav'}>
+        <nav className="navbar navbar-default navbar-fixed-top" role="navigation">
+          <div className="container">
+            <a href="#" className="title-store">{this.state.title}</a>
             <ul className="right">
               <li><a href="['catalogo']"><span className="glyphicon glyphicon-th"></span></a></li>
               <li>
@@ -26,5 +29,7 @@ class ComponentNavTop extends React.Component{
     );
   }
 }
-
+ComponentNavTop.defaultProps = {
+  mensaje3 : 'Props por defecto'
+}
 export default ComponentNavTop;
