@@ -1,6 +1,5 @@
 const path = require('path');
 
-
 var config ={
   entry:'./main.js',
   output:{

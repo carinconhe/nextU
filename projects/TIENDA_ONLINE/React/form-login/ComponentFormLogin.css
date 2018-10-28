@@ -19,5 +19,5 @@ h1 {
 
  #contenedorForm .error{
   color:red;
-  display: none;
+  font-size: 0.4em;
 }

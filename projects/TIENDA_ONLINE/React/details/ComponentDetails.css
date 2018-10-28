@@ -1,0 +1,37 @@
+h2 {
+  font-size: 0.9em;
+}
+
+h3 {
+  font-size: 0.5em;
+}
+.containter-details {
+  width: 100%;
+  background-color: white;
+  display: inline-block;
+  margin-top: 100px;
+  height: auto;
+}
+
+.containter-details .title {
+  margin: 5px 40px;
+}
+
+.containter-details .product{
+  margin: 10px 50px;
+}
+
+.containter-details  .image img{
+  width: 80%;
+  border: 1px solid #CBCAC7;
+  height: auto;
+}
+
+.containter-details   span{
+  display: block;
+}
+
+.containter-details button {
+  margin: 20px 20px;
+  border: 1px solid #CBCAC7;
+}

@@ -1,11 +1,13 @@
 import React from 'react';
 import './ComponentNavTop.css';
+import { NavLink } from 'react-router-dom';
 
 class ComponentNavTop extends React.Component{
   constructor(){
     super();
     this.state ={
-      title : "La Bodega"
+      title : "La Bodega",
+      visibleDiv : true
     }
   }
   render(){
@@ -15,13 +17,12 @@ class ComponentNavTop extends React.Component{
           <div className="container">
             <a href="#" className="title-store">{this.state.title}</a>
             <ul className="right">
-              <li><a href="['catalogo']"><span className="glyphicon glyphicon-th"></span></a></li>
-              <li>
-                <a href="['carrito']"><span className="glyphicon glyphicon-shopping-cart"></span></a>
+              <li><NavLink to='/tienda'><span className="glyphicon glyphicon-th"></span></NavLink></li>
+              <li><NavLink to='/carrito'><span className="glyphicon glyphicon-shopping-cart"></span></NavLink>
                 <label className="totalProd" ></label>
               </li>
-              <li><a href="['']"><span className="glyphicon glyphicon-inbox"></span></a></li>
-              <li><a href="['']"><span className="glyphicon glyphicon-log-out"></span></a></li>
+              <li><NavLink to='/'><span className="glyphicon glyphicon-inbox"></span></NavLink></li>
+              <li><NavLink to='/'><span className="glyphicon glyphicon-log-out"></span></NavLink></li>
             </ul>
           </div>
         </nav>
