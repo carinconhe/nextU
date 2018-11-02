@@ -1,0 +1,15 @@
+verificar que node sea mayor a 4
+  node -v
+Verificar que rpm se mayot a 3
+  npm -v
+Instalación de Apache cordova
+  npm install -g cordova
+Vericarion de la version de cordova
+  cordova -v
+Creación de proyecto en canola
+  cordova  create primerApp
+Añadir plataforma
+  cordova platform add browser
+  cordova platform add android
+Corre la aplicación.
+  cordova run browser
