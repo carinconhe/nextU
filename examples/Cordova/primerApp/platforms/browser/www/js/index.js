@@ -18,7 +18,7 @@
  */
 var app = {
     // Application Constructor
-    initialize: function() {
+    initialize: function (){
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
 
@@ -26,7 +26,7 @@ var app = {
     //
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
-    onDeviceReady: function() {
+    onDeviceReady: function (){
         this.receivedEvent('deviceready');
     },
 

@@ -1,0 +1,17 @@
+#eslint
+npm i -g eslint
+npm  install --save-dev eslint-config-rallycoding
+touch .eslintrc
+{
+"extends":"rallycoding"
+}
+
+#Como iniciar el proyecto
+react-native init  --version="0.44.0" diccionario
+
+#Para configurar el emulador de ios
+Xcode > Preferences > Locations > Select your Xcode version from the dropdown and exit Xcode.
+#Para ejecutar el proyecto
+react-native run-ios
+#Libreria para iconos
+npm install react-native-vector-icons --save

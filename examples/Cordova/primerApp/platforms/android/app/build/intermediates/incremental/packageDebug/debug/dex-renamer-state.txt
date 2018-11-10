@@ -1,0 +1,4 @@
+#Tue Nov 06 13:40:40 COT 2018
+base.0=/Applications/AMPPS/www/nextU/examples/Cordova/primerApp/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex
