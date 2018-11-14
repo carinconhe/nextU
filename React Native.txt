@@ -1,3 +1,6 @@
+#Como iniciar el proyecto
+react-native init  --version="0.44.0" diccionario
+
 #eslint
 npm i -g eslint
 npm  install --save-dev eslint-config-rallycoding
@@ -5,9 +8,6 @@ touch .eslintrc
 {
 "extends":"rallycoding"
 }
-
-#Como iniciar el proyecto
-react-native init  --version="0.44.0" diccionario
 
 #Para configurar el emulador de ios
 Xcode > Preferences > Locations > Select your Xcode version from the dropdown and exit Xcode.

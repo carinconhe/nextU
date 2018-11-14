@@ -1,11 +1,13 @@
 import React from 'react';
 import { Text, View } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const Titulo = (props) => {
     const { textStyles, viewStyle } = styles;
     return (
         <View style={viewStyle}>
           <Text style={textStyles}>{props.textoTitulo}</Text>
+          <Icon name="bars" size={20} color="#212121" />
         </View>
       );
 };
