@@ -21,3 +21,6 @@ AIzaSyCPtKx5cZBisbNvCJWZXQEQbAzF5-ovrL8
 
 #instalar superAgent
 npm install superagent --save
+
+#instalar component para conectarse con firebase
+npm install --save firebase@3.8.0
