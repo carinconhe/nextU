@@ -15,3 +15,9 @@ Xcode > Preferences > Locations > Select your Xcode version from the dropdown an
 react-native run-ios
 #Libreria para iconos
 npm install react-native-vector-icons --save
+
+#Crear un api key
+AIzaSyCPtKx5cZBisbNvCJWZXQEQbAzF5-ovrL8
+
+#instalar superAgent
+npm install superagent --save
