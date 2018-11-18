@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "nombre": "Manzana",
+        "descripcion": "La manzana es una fruta pomácea comestible, fruta del manzano doméstico (Malus domestica), otros manzanos (especies del género Malus) o híbridos de aquel. En algunas zonas de España se le suele llamar pero cuando tiene forma alargada,1 aunque en muchas partes de Andalucía se llama indistintamente a la manzana."
+    },
+    {
+        "id": 2,
+        "nombre": "Pera",
+        "descripcion": "Se denomina pera al fruto de distintas especies del género Pyrus, integrado por árboles caducifolios conocidos comúnmente como perales.1 Sin embargo, cuando se trata del fruto comestible, se hace referencia mayormente al producido por el llamado peral común (Pyrus communis). La pera es una fruta jugosa, carnosa, y una de las más importantes producidas en las regiones templadas."
+    },
+    {
+        "id": 3,
+        "nombre": "Naranja",
+        "descripcion": "La naranja es una fruta cítrica comestible obtenida del naranjo dulce (Citrus × sinensis), del naranjo amargo (Citrus × aurantium) y de naranjos de otras variedades o híbridos, antiguos híbridos asiáticos originarios de India, Vietnam o el sureste de China.1 Es un hesperidio carnoso de cáscara más o menos gruesa y endurecida, y su pulpa está formada típicamente por once gajos u hollejos llenos de jugo, el cual contiene mucha vitamina C, flavonoides y aceites esenciales. Se cultiva como un antiguo árbol ornamental y para obtener fragancias de sus frutos. Es más pequeña y dulce que el pomelo o toronja y más grande, aunque menos perfumada que la mandarina. Existen numerosas variedades de naranjas, siendo la mayoría híbridos producidos a partir de las especies Citrus maxima (pamplemusa), Citrus reticulata (mandarina) y Citrus medica (cidro)."
+    },
+    {
+        "id": 4,
+        "nombre": "Mango",
+        "descripcion": "El mango es una fruta de la Zona Intertropical de pulpa carnosa y dulce. Destaca entre sus principales características su buen sabor. Dicha pulpa puede ser o no fibrosa, siendo la variedad llamada mango de hilacha la que mayor cantidad de fibra contiene. Es una fruta normalmente de color verde en un principio, y amarillo, naranja e incluso rojo-granate cuando está madura, de sabor medianamente ácido cuando no ha madurado completamente. De origen asiático, India y Birmania, comprende numerosas variedades, muchas de ellas obtenidas por injerto. El mango es la fruta nacional de algunos países como India, Pakistán y Filipinas."
+    },
+    {
+        "id": 5,
+        "nombre": "Piña",
+        "descripcion": "Ananas comosus, la piña o el ananá o ananás, es una planta perenne de la familia de las bromeliáceas, nativa de América del Sur. Esta especie, de escaso porte y con hojas duras y lanceoladas de hasta 1 metro de largo, fructifica una vez cada tres años produciendo un único fruto fragante y dulce, muy apreciado en gastronomía."
+    }
+]

@@ -1,8 +1,8 @@
 import React from 'react';
-import {View} from 'react-native';
-import {Provider} from 'react-redux';
-import {createStore} from 'redux';
-import reducers from './reducers'
+import { View } from 'react-native';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import { reducers } from './reducers';
 
 const App = () => {
     return (
@@ -10,6 +10,6 @@ const App = () => {
             <View />
         </Provider>
     );
-}
+};
 
 export default App;

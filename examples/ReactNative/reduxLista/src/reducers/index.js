@@ -1,5 +1,6 @@
-import {combineReducers} from 'redux';
+import { combineReducers } from 'redux';
+import frutasReducer from './frutasReducer';
 
 export default combineReducers({
-    frutos:() =>[]
+    frutas: frutasReducer
 });
