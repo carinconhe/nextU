@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
 import frutasReducer from './frutasReducer';
+import seleccionadaReducer from './seleccionadaReducer';
 
 export default combineReducers({
-    frutas: frutasReducer
+    frutas: frutasReducer,
+    idFrutaSeleccionada : seleccionadaReducer
 });
