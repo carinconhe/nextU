@@ -27,3 +27,6 @@ npm install --save firebase@3.8.0
 
 #instalar redux y react-redux esto lo hacemos para trabajar con la misma version de los tutoriales.
 npm i --save redux@3.6.0 react-redux@5.0.4
+
+#Navegacion react-native-router-flux
+npm install --save react-native-router-flux
