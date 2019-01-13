@@ -14,7 +14,7 @@ Xcode > Preferences > Locations > Select your Xcode version from the dropdown an
 #Para ejecutar el proyecto
 react-native run-ios
 #Libreria para iconos
-npm install react-native-vector-icons --save
+npm install --save react-native-vector-icons@4.0.0 
 
 #Crear un api key
 AIzaSyCPtKx5cZBisbNvCJWZXQEQbAzF5-ovrL8
@@ -29,4 +29,4 @@ npm install --save firebase@3.8.0
 npm i --save redux@3.6.0 react-redux@5.0.4
 
 #Navegacion react-native-router-flux
-npm install --save react-native-router-flux
+npm install --save react-native-router-flux@3.38.0
