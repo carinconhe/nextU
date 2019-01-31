@@ -1,0 +1,28 @@
+Proceso de para instalar parse-server
+npm install parse-server parse-dashboard express nodemon --save
+
+Proceso para instalar mongodb con homebrew 
+1- Actualziar el brew
+brew update
+2 - Inatalar mongodb
+brew install mongodb
+3 - Actualizarlo
+brew upgrade mongodb
+4 - Para el funcionamiento carpeta almacenamiento de la informacion
+sudo mkdir -p /data/db
+5 - Permisos generales para escribir y leer para todo el mundo.
+sudo chmod 777 /data/db/
+
+Para arrancar el servicio de mongodb se ejecuta
+mongod //mongod --smallfiles
+
+Creacion del archivo Server.js
+
+Ejecucion - Configuracion
+en el package.json modificar los scripts y colocar ls siguiente linea
+"start": "nodemon Server.js"
+Luego ejecutar
+npm start
+
+Desde el navegador
+http://localhost:8080/dashboard/
