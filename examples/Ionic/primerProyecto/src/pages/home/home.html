@@ -4,9 +4,34 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
+  <ion-refresher (ionRefresh)="getTrabajadores($event)">
+  <ion-refresher-content>
+
+  </ion-refresher-content>
+  </ion-refresher>
   <ion-fab bottom right>
     <button ion-fab icon-only (click)="dialogoAdd()">
       <ion-icon name="add"></ion-icon>
     </button>
   </ion-fab>
+  <ion-list>
+    <ion-item-sliding *ngFor="let trabajador of trabajadores">
+      <ion-item>
+        <ion-avatar item-left>
+          <img [src]="trabajador.imagen">
+        </ion-avatar>
+        <h2>{{trabajador.nombre}}</h2>
+        <h3>{{trabajador.email}}</h3>
+        <p>Tel: {{trabajador.telefono}}</p>
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button icon-only color="secondary" (click)="editTrabajador(trabajador)">
+          <ion-icon name="create"></ion-icon>
+        </button>
+        <button ion-button icon-only color="danger" (click)="deleteTrabajador(trabajador)">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
 </ion-content>
