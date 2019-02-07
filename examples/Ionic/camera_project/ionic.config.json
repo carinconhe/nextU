@@ -1,0 +1,8 @@
+{
+  "name": "camera_project",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "id": "a7fc6853"
+}
