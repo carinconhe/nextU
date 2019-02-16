@@ -1,14 +1,23 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-title>Mis fotos</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <h2>Capturar fotografía</h2>
+  <button ion-button full (click)="capturarFoto()">
+    <ion-icon name="camera"></ion-icon> &nbsp; Tomar foto
+  </button>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6 *ngFor="let foto of fotos; let i = index">
+        <ion-card class="block">
+          <img [src]="foto">
+        </ion-card>
+        <button ion-button color="danger" (click)="eliminarFoto(i)">Eliminar</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

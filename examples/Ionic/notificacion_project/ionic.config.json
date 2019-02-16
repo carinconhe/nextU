@@ -1,0 +1,8 @@
+{
+  "name": "notificacion_project",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "id": "18dad00b"
+}

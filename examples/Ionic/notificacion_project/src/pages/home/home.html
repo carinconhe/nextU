@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Inicio</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-label color="primary" stacked>Mensaje de notificación</ion-label>
+  <ion-input type="text" placeholder="mensaje" [(ngModel)]="mensaje"></ion-input>
+  <button ion-button (click)="enviarNotificacion()">Enviar</button>
+</ion-content>

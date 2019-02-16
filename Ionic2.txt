@@ -1,26 +1,75 @@
-Instalación de ionic y cordova
+##Instalación de ionic y cordova
 npm install ionic cordova -g
 
-Instalación adicional 
+##Instalación adicional 
 npm install -g ios-sim
 
-Creación del proyecto
-Crear el directorio y una vez adentro 
+##Creación del proyecto
+##Crear el directorio y una vez adentro 
 ionic start primerProyecto blank --type ionic-angular
+ionic start camera_project blank --type ionic-angular
+ionic start notificacion_project tabs
 
-Creacion de cuenta en https://dashboard.ionicframework.com/login
+
+##Creacion de cuenta en https://dashboard.ionicframework.com/login
 usuario:carincon
 pass:dukmyn-romhE2-hyjfoz
 
+##Ingresamos al proyecto  y nos logueamos.
 cd primerProyecto
 ionic signup
 
-Correr el proyecto en el navegador en modo laboratorio
+ correr dependecias de ios en cordova
+ ionic cordova run ios
+
+
+##Correr el proyecto en el navegador en modo laboratorio
 ionic serve --l
 
-Para correr el proyecto en android o ios 
+##Para correr el proyecto en android o ios 
 ionic run android /// ionic cordova run android
 ionic run ios /// ionic cordova run ios
 
-Para crear un nuevo componente
+##Para crear un nuevo componente
 ionic generate page registro
+
+##Instalacion de ionic native
+npm install @ionic-native/core@latest --save
+npm install @ionic-native/core --save
+
+##Instalacion de la libreria de la camara.
+npm install @ionic-native/camera --save
+npm install --save @ionic-native/camera@4
+ionic cordova plugin add cordova-plugin-camera
+
+ionic cordova platform add browser
+ionic cordova platform add ios
+ionic cordova platform add android
+
+
+cordova run ios --debug --target "iPhone-8" --buildFlag='-UseModernBuildSystem=0'
+
+ionic cordova build ios
+ionic cordova run ios  --target="iPhone-6s" -l
+
+ionic cordova run ios --simulator -lc --target="iPhone-6s" --buildFlag='-UseModernBuildSystem=0'
+
+ionic cordova run android --simulator -lc 
+
+#Notificaciones
+#Creacion de proyecto
+ionic start notificacion_project tabs --type ionic-angular
+#Lanzar emulador
+ionic serve -l
+#Instalación de dependecias.
+ionic cordova plugin add cordova-plugin-local-notification
+npm install @ionic-native/local-notifications
+
+#Notificaciones Push
+#Creacion de proyecto
+ionic start notificacion_push_project tabs --type ionic-angular
+Luego instalamos la libreria
+npm i @ionic/cloud-angular --save
+
+ionic cordova plugin add phonegap-plugin-push --variable SENDER_ID=AAAASkUTay8:APA91bGaXZ5LQi0NVLerUTapah58W9rp2exT1DFSVmSDklSWP0uIAOxhtc9A4fAA5lH-0kp0cNIZmRaw5iwGBSpVc1juVNXCEe37oOTDBa9y6jJeOFAYCarg7NWiGXHSp_-QXkTZsC8u --save
+
