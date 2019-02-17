@@ -52,8 +52,9 @@ cordova run ios --debug --target "iPhone-8" --buildFlag='-UseModernBuildSystem=0
 ionic cordova build ios
 ionic cordova run ios  --target="iPhone-6s" -l
 
-ionic cordova run ios --simulator -lc --target="iPhone-6s" --buildFlag='-UseModernBuildSystem=0'
+ionic cordova run ios --simulator -lc --target="iPhone-6s" -- --buildFlag='-UseModernBuildSystem=0'
 
+ionic cordova build android
 ionic cordova run android --simulator -lc 
 
 #Notificaciones
@@ -73,3 +74,13 @@ npm i @ionic/cloud-angular --save
 
 ionic cordova plugin add phonegap-plugin-push --variable SENDER_ID=AAAASkUTay8:APA91bGaXZ5LQi0NVLerUTapah58W9rp2exT1DFSVmSDklSWP0uIAOxhtc9A4fAA5lH-0kp0cNIZmRaw5iwGBSpVc1juVNXCEe37oOTDBa9y6jJeOFAYCarg7NWiGXHSp_-QXkTZsC8u --save
 
+#Contactos
+#Creacion de proyecto
+ionic start contactos_project tabs --type ionic-angular
+ionic cordova plugin add --save cordova-plugin-contacts
+npm i --save @ionic-native/contacts
+
+#GeoLocalización
+ionic cordova plugin add cordova-plugin-geolocation
+ionic cordova plugin add cordova-plugin-geolocation --variable GEOLOCATION_USAGE_DESCRIPTION="To locate you"
+npm install @ionic-native/geolocation
