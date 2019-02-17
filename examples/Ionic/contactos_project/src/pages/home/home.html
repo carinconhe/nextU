@@ -1,0 +1,17 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>Contactos</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+      <ion-input type="text" [(ngModel)]="contactoParaEncontrar" placeholder="Introduce un nombre">
+      </ion-input>
+      <button ion-button (click)="buscarContacto(contactoParaEncontrar)">Buscar</button>
+      <ion-list [hidden]="!buscar">
+          <ion-item *ngFor="let contacto of contactoEncontrado">
+              {{contacto.displayName}}
+          </ion-item>
+      </ion-list>
+  </ion-content>
+  
