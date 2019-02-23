@@ -1,35 +1,32 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Registro</ion-title>
+    <ion-title>Registrate</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-card>
-    <img src="assets/imgs/bk.jpg" />
-  </ion-card>
+  <h2>Crea tu cuenta en CineApp</h2>
   <ion-list no-lines>
     <ion-item>
-      <ion-label floating>Nombre</ion-label>
+      <ion-label class="my-label" floating>Nombre</ion-label>
       <ion-input type="text" [(ngModel)]="usuarioARegistrar.name" ></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label floating>Usuario</ion-label>
+      <ion-label class="my-label" floating>Usuario</ion-label>
       <ion-input type="text" [(ngModel)]="usuarioARegistrar.username" ></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label floating>Correo electrónico</ion-label>
+      <ion-label class="my-label" floating>Correo electrónico</ion-label>
       <ion-input type="email" [(ngModel)]="usuarioARegistrar.email" ></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label floating>Contraseña</ion-label>
+      <ion-label class="my-label" floating>Contraseña</ion-label>
       <ion-input type="password" [(ngModel)]="usuarioARegistrar.password" ></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label floating>Confirmar la  contraseña</ion-label>
+      <ion-label class="my-label" floating>Confirmar la  contraseña</ion-label>
       <ion-input type="password" [(ngModel)]="confirmarContrasena" ></ion-input>
     </ion-item>
   </ion-list>
-  <button block ion-button (click)="registrar()">Registrar</button>
-  <button clear block ion-button (click)="irALogin()">¿Ya tiene cuenta? Inicia sesión</button>
+  <button block ion-button (click)="registrar()" color="danger">Registrate</button>
 </ion-content>

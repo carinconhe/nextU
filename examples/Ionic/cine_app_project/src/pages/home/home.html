@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Cartelera
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item-sliding *ngFor="let pelicula of peliculas">
+      <ion-item>
+        <ion-thumbnail item-left>
+          <img [src]="pelicula.imagen">
+        </ion-thumbnail>
+        <h2>{{pelicula.titulo}}</h2>
+        <h3>{{pelicula.categoria}}</h3>
+        <p>{{pelicula.estrellas}}</p>
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button icon-only color="danger" (click)="editpelicula(pelicula)">
+          <ion-icon name="heart"></ion-icon>
+        </button>
+        <button ion-button icon-only color="positive" (click)="deletepelicula(pelicula)">
+          <ion-icon name="text"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <ion-fab bottom right>
+    <button ion-fab icon-only (click)="dialogoAdd()">
+      <ion-icon name="text"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>
