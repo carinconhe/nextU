@@ -84,3 +84,6 @@ npm i --save @ionic-native/contacts
 ionic cordova plugin add cordova-plugin-geolocation
 ionic cordova plugin add cordova-plugin-geolocation --variable GEOLOCATION_USAGE_DESCRIPTION="To locate you"
 npm install @ionic-native/geolocation
+
+
+ionic start cine_app_project --type ionic-angular
