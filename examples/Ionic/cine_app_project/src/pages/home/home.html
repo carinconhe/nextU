@@ -7,6 +7,11 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-refresher (ionRefresh)="getPeliculas($event)">
+      <ion-refresher-content>
+    
+      </ion-refresher-content>
+  </ion-refresher>
   <ion-list>
     <ion-item-sliding *ngFor="let pelicula of peliculas">
       <ion-item>
@@ -15,20 +20,26 @@
         </ion-thumbnail>
         <h2>{{pelicula.titulo}}</h2>
         <h3>{{pelicula.categoria}}</h3>
-        <p>{{pelicula.estrellas}}</p>
+        <ion-icon name="star" class="gris-claro" *ngIf="pelicula.estrellas > 0"></ion-icon>
+        <ion-icon name="star" class="gris-claro" *ngIf="pelicula.estrellas > 1"></ion-icon>
+        <ion-icon name="star" class="gris-claro" *ngIf="pelicula.estrellas > 2"></ion-icon>
+        <ion-icon name="star" class="gris-claro" *ngIf="pelicula.estrellas > 3"></ion-icon>
+        <ion-icon name="star" class="gris-claro" *ngIf="pelicula.estrellas > 4"></ion-icon>
+        
+        <ion-icon *ngIf="pelicula.corazon ==true" name="heart" color="danger" item-right></ion-icon>
       </ion-item>
       <ion-item-options side="right">
-        <button ion-button icon-only color="danger" (click)="editpelicula(pelicula)">
-          <ion-icon name="heart"></ion-icon>
+        <button ion-button icon-only [color]="pelicula.corazon?'dark':'danger'" (click)="darLike(pelicula)">
+          <ion-icon [name]="pelicula.corazon?'thumbs-down':'heart'"></ion-icon>
         </button>
-        <button ion-button icon-only color="positive" (click)="deletepelicula(pelicula)">
+        <button ion-button icon-only color="primary" (click)="comentarpelicula(pelicula)">
           <ion-icon name="text"></ion-icon>
         </button>
       </ion-item-options>
     </ion-item-sliding>
   </ion-list>
   <ion-fab bottom right>
-    <button ion-fab icon-only (click)="dialogoAdd()">
+    <button ion-fab icon-only (click)="irAComentarios()">
       <ion-icon name="text"></ion-icon>
     </button>
   </ion-fab>
