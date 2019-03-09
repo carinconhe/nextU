@@ -1,0 +1,9 @@
+<ActionBar title="Mapa">
+    <ActionItem text="ubicarme" ios.position="right" (tap)="ubicarme()"></ActionItem>
+</ActionBar>
+<GridLayout>
+        <MapView #mapView [latitude]="miUbicacion.latitud" [longitude]="miUbicacion.longitud"
+                [zoom]="miUbicacion.zoom" [bearing]="miUbicacion.bearing" [tilt]="miUbicacion.tilt"
+                i-padding="50,50,50,50" [padding]="miUbicacion.padding" (mapReady)="onMapReady($event)">
+        </MapView>
+</GridLayout>

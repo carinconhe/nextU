@@ -1,0 +1,20 @@
+#container{
+    margin: 30% 10px ;
+    border-width: 1px;
+    border-collapse: gray;
+    width: 70%;
+    height: 40%;
+    vertical-align: center;
+}
+
+.fields{
+    margin: 10px 30px;
+}
+
+.button{
+    background-color: blue;
+    color:#fff;
+    font-weight: bold;
+    border-radius: 80;
+    width: 50%
+}

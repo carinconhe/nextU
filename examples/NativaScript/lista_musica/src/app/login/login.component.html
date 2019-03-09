@@ -1,6 +1,26 @@
 <StackLayout orientation="vertical">
-    <label text="Login" verticalAlignment="center" style="text-align:center" marginTop="20"></label>
-    <Textfield hint="Ingrese una busqueda" marginTop="20" id="textfieldBuscar"
-    ></Textfield>
-    <button text="Buscar" verticalAlignment="center" marginTop="20" (tap)="buscar()"></button>
+    <StackLayout id="container" #container >
+            <label text="Autenticación de usuario" verticalAlignment="center" style="text-align:center" marginTop="20"></label>
+            <Textfield 
+                hint="Usuario" 
+                marginTop="20" 
+                id="usuario" 
+                class="fields username"
+                (textChange)="clearAninmations()"
+            ></Textfield>
+            <Textfield 
+                hint="Contraseña" 
+                marginTop="20" 
+                id="password" 
+                secure="true" 
+                class="fields"
+                (textChange)="clearAninmations()"
+            ></Textfield>
+            <button text="Iniciar sesión" verticalAlignment="center" marginTop="20" (tap)="login()"class="button"></button>
+            <button text="¿No tienes cuenta?, registrate" verticalAlignment="center" marginTop="20" (tap)="registrate()" ></button>
+    </StackLayout>
+    <ActivityIndicator row="1" #activityIndicator busy="false" 
+        (busyChange)="onBusyChange($event)" width="100" height="100" class="activity-indicator">
+    </ActivityIndicator>
+    <label marginTop="10" id="texto" [text]="[result]" width="100%" horizontalAlignment="center"></label>
 </StackLayout>

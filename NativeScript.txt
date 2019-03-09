@@ -1,0 +1,41 @@
+#Native Script
+npm i -g nativescript
+#Para verificar que todo este bien instalado ejecutar
+tns doctor
+#Primer Proyecto
+#Crear una carpeta para administrar todos los proyectos
+tns create primer_proyecto --ng
+#Añadir plataforma.
+tns platform add ios
+tns platform add android
+#Ejecutor proyectos
+tns run ios
+#crear nuevo project para mostrar navegación
+tns create navegacion --ng
+
+#Instalar Couchbase 
+tns plugin add nativescript-couchbase
+
+tns create Pendientes --ng
+tns platform add ios
+tns platform add android
+tns plugin add nativescript-couchbase
+tns plugin add nativescript-geolocation
+tns plugin add nativescript-google-maps-sdk
+
+Camara
+tns plugin add nativescript-camera
+npm install nativescript-camera --save
+
+Pruebas unitarias
+tns test init
+
+Configuracion de telefono
+tns device
+
+Puerto 9876
+
+tns test android
+tns test ios  --emulator
+
+Publicacion de aplicacion.
