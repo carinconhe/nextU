@@ -1,0 +1,23 @@
+<ActionBar title="Buscador de Universidades" class="action-bar">
+</ActionBar>
+
+<StackLayout orientation="vertical">
+    <StackLayout id="container">
+        <textField 
+            hint="Introduce el nombre a buscar" 
+            class="textfieldBuscador"
+            (returnPress)="buscarUniversidad($event)"
+        ></textField>
+        <label class="labelBuscador" text="Busca universidad en tu ubicación"></label>
+        <Button class="btn btn-primary" text="Ubicarme" ></Button>
+    </StackLayout>
+    <ListView [items]="items" class="list-group">
+            <ng-template let-item="item">
+                <GridLayout rows="auto, auto, auto, auto" class="list-group-item">
+                    <Label class="h3" [text]="item.name" row="0" col="1"></Label>
+                    <Label class="h4" [text]="item.country" row="1" col="1"></Label>
+                    <Label class="h4" [text]="item.web_pages" row="2" col="1"></Label>
+                </GridLayout>
+            </ng-template>
+    </ListView>
+</StackLayout>
