@@ -1,16 +1,20 @@
 import { Injectable } from "@angular/core";
-import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { HttpClient, HttpHeaders,HttpParams } from "@angular/common/http";
 
 @Injectable()
-export class hipoUniversityService{
-    public  search  : string;
-    private serverUrl = "http://universities.hipolabs.com/search?name=";
+export class geonamesService {
+    public latitude  : string;
+    public longitude : string;
+
+
+    private serverUrl = "http://api.geonames.org/findNearbyPlaceNameJSON?";
 
     constructor(private http: HttpClient) { }
 
     getData() {
         let headers = this.createRequestHeader();
-        return this.http.get(this.serverUrl+this.search, { headers: headers });
+        let params  = this.createRequestParameter();
+        return this.http.get(this.serverUrl, { headers: headers,params: params });
     }
 
     private createRequestHeader() {
@@ -25,5 +29,12 @@ export class hipoUniversityService{
             'Access-Control-Expose-Headers':'Content-Length,Content-Range'
          });
         return headers;
+    }
+
+    private createRequestParameter(){
+        let params = new HttpParams().set('lat', this.latitude)
+                                     .set('lng',this.longitude)
+                                     .set('username','carincon');
+        return params;
     }
 }

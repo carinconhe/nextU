@@ -9,7 +9,7 @@
             (returnPress)="buscarUniversidad($event)"
         ></textField>
         <label class="labelBuscador" text="Busca universidad en tu ubicación"></label>
-        <Button class="btn btn-primary" text="Ubicarme" ></Button>
+        <Button class="btn btn-primary" text="Ubicarme" (tap)="ubicarme()"></Button>
     </StackLayout>
     <ListView [items]="items" class="list-group">
             <ng-template let-item="item">
