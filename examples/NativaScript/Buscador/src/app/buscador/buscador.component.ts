@@ -13,17 +13,26 @@ import { Ubicacion } from '../services/ubicacion';
 })
 
 export class BuscadorComponent {
-    miUbicacion : Ubicacion = {
+    isVisibleSecForm:boolean    = false;
+    textLabelCountry:string     = "";
+    miUbicacion : Ubicacion     = {
         latitud     :0,
         longitud    :0
     }
+    public search : string = null;
 
-    items: any =[{
+    items: any  =[{
         name        :"",
         country     :"",
         web_pages   :""
     }]
     
+    itemsData:any = {any:[{
+        countryId   :0,
+        countryName :"",
+        countryCode :""
+        }]}
+
     constructor(
         private datosUniversidades:hipoUniversityService,
         private datosGeonames:geonamesService
@@ -36,34 +45,57 @@ export class BuscadorComponent {
             .subscribe(
                 result =>  {
                     this.items = result;
+                    this.isVisibleSecForm=false;
+                    this.search = textField.text;
                 }, err =>{
                     console.error('Error',err);
                 }
             );
     }
 
+    buscarUniversidadPais(){
+        let country     = this.itemsData.geonames[0].countryName;
+        let searchFinal = this.search;
+        this.datosUniversidades.country = country;
+        this.datosUniversidades.search  = searchFinal;
+        this.datosUniversidades.getDataCountry()
+                                .subscribe(
+                                    result =>  {
+                                        this.items = result;
+                                        this.isVisibleSecForm=false;
+                                        this.search = searchFinal;
+                                    }, err =>{
+                                        console.error('Error',err);
+                                    }
+                                );
+    }
+
     ubicarme(){
         this.permitirLocation();
+        this.items = null;
         getCurrentLocation({desiredAccuracy:3})
             .then(location =>{
                 this.miUbicacion ={
                     latitud     :location.latitude,
                     longitud    :location.longitude
                 }
-                
                 this.datosGeonames.latitude     = this.miUbicacion.latitud.toString();
                 this.datosGeonames.longitude    = this.miUbicacion.longitud.toString();
-                this.datosGeonames.getData()
-                    .subscribe(
-                        result =>  {
-                            console.log(result);
-                        }, err =>{
-                            console.error('Error',err);
-                        }
-                    );
+                this.datosGeonames.getData().subscribe(res =>  {
+                        this.itemsData          = res;
+                        this.textLabelCountry   = "Tu ubicación es :"+this.itemsData.geonames[0].countryName;
+                        this.isVisibleSecForm   = true;
+                    }, err =>{
+                        console.error('Error',err);
+                    }
+                );
             }, err =>{
                 console.log('Error',err.message);
             });
+    }
+
+    hideForm(){
+        this.isVisibleSecForm=false;
     }
 
     permitirLocation(){

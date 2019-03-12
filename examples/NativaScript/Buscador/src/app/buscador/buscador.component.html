@@ -20,4 +20,12 @@
                 </GridLayout>
             </ng-template>
     </ListView>
+    <StackLayout id="secondForm" orientation="vertical">
+        <GridLayout *ngIf="isVisibleSecForm"  rows="auto, auto, auto, auto" class="grid">
+            <label class="btn1 sup" [text]="textLabelCountry" row="0" col="0"> </label>
+            <Button class="btn1" text="Buscar en mi ubicación" (tap)="buscarUniversidadPais()" row="1" col="0"></Button>
+            <Button class="btn1" text="Buscar en todo el mundo" row="2" col="0" (tap)="ubicarme()"></Button>
+            <Button class="btn1 bottom" text="Cancelar" row="3" col="0" (tap)="hideForm()"></Button>
+        </GridLayout>
+    </StackLayout>
 </StackLayout>

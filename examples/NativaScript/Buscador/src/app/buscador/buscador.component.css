@@ -20,3 +20,24 @@
     width: 50%;
     margin-top: 20px;
 }
+#secondForm,.grid{
+    vertical-align: bottom;
+    margin-top: 20%;
+}
+.btn1{
+    align-content: center;
+    text-align:center;
+    border-style: solid;
+    border-width: 1px;
+    margin: 0px 50px;
+    padding: 20px 0; 
+}
+.btn1.sup{
+    color:gray;
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%;
+}
+.btn1.bottom{
+    border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+}
